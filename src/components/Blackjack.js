@@ -68,25 +68,24 @@ class Blackjack extends Component {
   //determine score of hand 
   calcScore(hand){
     let score = 0;
-    let ace = false;
 
     for (const card of hand) {
       const value = card.value;
+
       if (isNaN(value)) {
         if (value==="ACE") {
-          ace = true;
+          //check if score goes over 21 for every instance of ace in user's hand 
+          if (score + 11 > 21) {
+            score += 1;
+          } else { 
+            score += 11; }
         } else {
           score += 10;
         }
       } else {
         score += Number(value);
       }
-    }
 
-    if (ace) {
-      if (score + 11 > 21) {
-        score += 1;
-      } else { score += 11; }
     }
 
     //AUTOMATIC loss if score > 21 
