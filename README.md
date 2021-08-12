@@ -1,4 +1,4 @@
-## (Live Demo)[https://trusting-pike-7b0980.netlify.app/]
+## [Live Demo](https://trusting-pike-7b0980.netlify.app/)
 
 # Blackjack
 Built with React.js
